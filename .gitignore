@@ -1,10 +1,10 @@
 .DS_Store
 xcuserdata
-MyNewPlugin/.vs
-MyNewPlugin/build-web/*.data
-MyNewPlugin/build-web/imgs*
-MyNewPlugin/build-web/fonts.js
-MyNewPlugin/build-web/svgs.js
-MyNewPlugin/build-web/favicon.ico
+PaloSandroSynth/.vs
+PaloSandroSynth/build-web/*.data
+PaloSandroSynth/build-web/imgs*
+PaloSandroSynth/build-web/fonts.js
+PaloSandroSynth/build-web/svgs.js
+PaloSandroSynth/build-web/favicon.ico
 *.RPP-bak
 

@@ -1,0 +1,2 @@
+# PaloSandroSynth readme
+Synthesiser Template
