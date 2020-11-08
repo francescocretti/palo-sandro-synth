@@ -38,7 +38,7 @@ PaloSandroSynth::PaloSandroSynth(const InstanceInfo& info)
     
     pGraphics->LoadFont("Roboto-Regular", ROBOTO_FN);
     pGraphics->LoadFont("Logo", LOGO_FONT_FN);
-//    auto knobSVG = pGraphics->LoadSVG(BEFACO_TINYKNOB_FN); /* TASK_02 */
+    auto knobSVG = pGraphics->LoadSVG(BEFACO_TINYKNOB_FN); /* TASK_02 */
     auto sliderPotSVG = pGraphics->LoadSVG(BEFACO_SLIDEPOT_FN);
     auto sliderHandleSVG = pGraphics->LoadSVG(BEFACO_SLIDEPOTHANDLE_FN);
 
@@ -95,7 +95,7 @@ PaloSandroSynth::PaloSandroSynth(const InstanceInfo& info)
 
     /* TASK_03 -- insert some code here! */
     
-//    pGraphics->AttachControl(new ISVGKnobControl(masterArea.GetCentredInside(100), knobSVG, kParamGain)); /* TASK_02 */
+    pGraphics->AttachControl(new ISVGKnobControl(masterArea.GetCentredInside(100), knobSVG, kParamGain)); /* TASK_02 */
     
     // Keyboard
     pGraphics->AttachControl(new IVKeyboardControl(keyboardArea, 36, 64), kCtrlTagKeyboard);
@@ -113,14 +113,14 @@ void PaloSandroSynth::ProcessBlock(sample** inputs, sample** outputs, int nFrame
   mSynth.ProcessBlock(inputs, outputs, 0, 1, nFrames);
 
   /* TASK_02 */
-  /*
+  
   const double gain = GetParam(kParamGain)->Value() / 100.; // TASK_04
  
   for (int s = 0; s < nFrames; s++)
   {
     outputs[0][s] *= gain;
   }
-  */
+  
 
   // copy left hand channel audio to right hand channel
   memcpy(outputs[1], outputs[0], nFrames * sizeof(sample));
