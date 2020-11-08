@@ -60,7 +60,7 @@ PaloSandroSynth::PaloSandroSynth(const InstanceInfo& info)
     /* ADD CONTROLS */
     
     // Background control, either a fixed color, gradient, svg or bitmap
-    pGraphics->AttachPanelBackground(IColor(96, 150, 186, 0)); /* TASK_01 */
+    pGraphics->AttachPanelBackground(IColor(0, 96, 150, 186)); /* TASK_01 */
 //    pGraphics->AttachPanelBackground(IPattern::CreateLinearGradient(bounds, EDirection::Vertical, {{COLOR_LIGHT_GRAY, 0.}, {COLOR_DARK_GRAY, 1.}}));
      
     // Group controls (background labels)
