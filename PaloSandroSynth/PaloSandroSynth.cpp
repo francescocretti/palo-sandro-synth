@@ -8,7 +8,7 @@
 PaloSandroSynth::PaloSandroSynth(const InstanceInfo& info)
 : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
-  GetParam(kParamGain)->InitDouble("Gain", 0., 0., 100.0, 0.01, "%"); // TASK_04
+  GetParam(kParamGain)->InitDouble("Gain", 100.0, 0., 100.0, 0.01, "%"); // TASK_04
   GetParam(kParamAmpAttack)->InitDouble("Attack", 10., 1., 1000., 0.1, "ms", IParam::kFlagsNone, "ADSR", IParam::ShapePowCurve(3.));
   GetParam(kParamAmpDecay)->InitDouble("Decay", 10., 1., 1000., 0.1, "ms", IParam::kFlagsNone, "ADSR", IParam::ShapePowCurve(3.));
   GetParam(kParamAmpSustain)->InitDouble("Sustain", 50., 0., 100., 1, "%", IParam::kFlagsNone, "ADSR");
@@ -94,6 +94,12 @@ PaloSandroSynth::PaloSandroSynth(const InstanceInfo& info)
     // Master controls
 
     /* TASK_03 -- insert some code here! */
+    // volume knob label
+    pGraphics->AttachControl(new ITextControl(masterArea.GetCentredInside(100).GetTranslated(0, -80), "Volume"));
+
+    // volume knob caption
+    pGraphics->AttachControl(new ICaptionControl(masterArea.GetCentredInside(100).GetTranslated(0, 80), kParamGain));
+    
     
     pGraphics->AttachControl(new ISVGKnobControl(masterArea.GetCentredInside(100), knobSVG, kParamGain)); /* TASK_02 */
     
