@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>PaloSandroSynth</string>
 	<key>CFBundleGetInfoString</key>
-	<string>PaloSandroSynth v0.6.0 Copyright 2020 Acme Inc</string>
+	<string>PaloSandroSynth v0.6.1 Copyright 2020 Acme Inc</string>
 	<key>CFBundleIconFile</key>
 	<string>PaloSandroSynth.icns</string>
 	<key>CFBundleIdentifier</key>
@@ -19,11 +19,11 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.6.0</string>
+	<string>0.6.1</string>
 	<key>CFBundleSignature</key>
 	<string>SoXA</string>
 	<key>CFBundleVersion</key>
-	<string>0.6.0</string>
+	<string>0.6.1</string>
 	<key>CSResourcesFileMapped</key>
 	<true/>
 	<key>LSApplicationCategoryType</key>

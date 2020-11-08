@@ -1,7 +1,7 @@
 #define PLUG_NAME "PaloSandroSynth"
 #define PLUG_MFR "FrancescoCretti"
-#define PLUG_VERSION_HEX 0x00000600
-#define PLUG_VERSION_STR "0.6.0"
+#define PLUG_VERSION_HEX 0x00000601
+#define PLUG_VERSION_STR "0.6.1"
 #define PLUG_UNIQUE_ID 'SoXA'
 #define PLUG_MFR_ID 'Acme'
 #define PLUG_URL_STR "https://iplug2.github.io"
