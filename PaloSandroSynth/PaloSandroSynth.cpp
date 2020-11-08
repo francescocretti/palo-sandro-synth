@@ -8,7 +8,8 @@
 PaloSandroSynth::PaloSandroSynth(const InstanceInfo& info)
 : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
-  GetParam(kParamGain)->InitDouble("Gain", 100.0, 0., 100.0, 0.01, "%"); // TASK_04
+  //GetParam(kParamGain)->InitDouble("Gain", 100.0, 0., 100.0, 0.01, "%"); // TASK_04
+  GetParam(kParamGain)->InitGain("Gain", 0.0, -64.0, 12.0, 0.5); // TASK_04
   GetParam(kParamAmpAttack)->InitDouble("Attack", 10., 1., 1000., 0.1, "ms", IParam::kFlagsNone, "ADSR", IParam::ShapePowCurve(3.));
   GetParam(kParamAmpDecay)->InitDouble("Decay", 10., 1., 1000., 0.1, "ms", IParam::kFlagsNone, "ADSR", IParam::ShapePowCurve(3.));
   GetParam(kParamAmpSustain)->InitDouble("Sustain", 50., 0., 100., 1, "%", IParam::kFlagsNone, "ADSR");
@@ -120,7 +121,7 @@ void PaloSandroSynth::ProcessBlock(sample** inputs, sample** outputs, int nFrame
 
   /* TASK_02 */
   
-  const double gain = GetParam(kParamGain)->Value() / 100.; // TASK_04
+  const double gain = GetParam(kParamGain)->DBToAmp(); // TASK_04
  
   for (int s = 0; s < nFrames; s++)
   {
